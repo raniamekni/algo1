@@ -1,0 +1,52 @@
+ALOGORITHM STRING_CALCULATION
+VAR
+string: STRING;
+i, j: INTEGER;
+string_len: INTEGER := 0;
+count: INTEGER := 0;
+vowels_count: INTEGER := 0;
+words_number: INTEGER := 0;
+BEGIN
+write ("Enter you string");
+Read(string);
+
+WHILE (string[count] <> ".") DO
+    string_len := string_len + 1;
+    count := count + 1;
+END_WHILE
+
+FOR i FROM 0 TO string_len STEP step DO
+    IF (string[i] = " ") THEN
+        words_number := words_number + 1;
+    END_IF
+END_FOR
+
+FOR j FROM 0 TO string_len STEP step DO
+    SWITCH (string[j] DO)
+        casa A : vowels_count = vowels_count + 1; break;
+        casa a : vowels_count = vowels_count + 1; break;
+
+        casa E : vowels_count = vowels_count + 1; break;
+        casa e : vowels_count = vowels_count + 1; break;
+        
+        casa I : vowels_count = vowels_count + 1; break;
+        casa i : vowels_count = vowels_count + 1; break;
+        
+        casa O : vowels_count = vowels_count + 1; break;
+        casa o : vowels_count = vowels_count + 1; break;
+        
+        casa U : vowels_count = vowels_count + 1; break;
+        casa u : vowels_count = vowels_count + 1; break;
+        
+        casa Y : vowels_count = vowels_count + 1; break;
+        casa y : vowels_count = vowels_count + 1; break;
+        default:
+    END_SWITCH
+END_FOR
+
+write("string length : ", string_len)
+write("words number : ", words_number)
+write("vowels count : ", vowels_count)
+
+
+
